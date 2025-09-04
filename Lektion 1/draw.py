@@ -1,15 +1,17 @@
 import pygame
+import pygame.draw_py
 
 pygame.init() # Initialize Pygame
 screen = pygame.display.set_mode((640, 480)) # Create a window of 640x480 pixels
 screen.fill((255, 255, 255)) # Fill the screen with white
 
-pygame.draw.line(screen, (0, 0, 0), (100, 380), (540, 380)) # Draw a black line
-
-pygame.draw.line(screen, (34, 139, 34), (100, 380), (540, 380), 5) #ground
-pygame.draw.line(screen, (34, 139, 34), (100, 380), (100, 100), 5) #væg
-pygame.draw.line(screen, (34, 139, 34), (540, 380), (540, 100), 5) #væg2
-# Draw the roof
+pygame.draw.line(screen, (00, 00, 00), (100, 380), (300, 380), 5) #Gulvet
+pygame.draw.line(screen, (128, 92, 32), (100, 380), (100, 200), 5) # Venstre væg
+pygame.draw.line(screen, (128, 92, 32), (300, 380), (300, 200), 5) # Højre væg
+pygame.draw.polygon(screen, (00, 00, 00), ((100, 200), (200, 100), (300, 200)), 5) # Taget
+pygame.draw.circle(screen, (00, 00, 00), (250, 240), 30, 3) # Vinduet
+pygame.draw.rect(screen, (00,00,00) , (140, 280, 60, 100), 3) # Døren
+pygame.draw.circle(screen, (00, 00, 00), (185, 340), 4, 3) # Dørhåndtaget
 
 # Make sure the window stays open until the user closes it
 run_flag = True
