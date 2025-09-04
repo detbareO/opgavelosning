@@ -6,9 +6,9 @@ screen.fill((255, 255, 255)) # Fill the screen with white
 
 pygame.draw.line(screen, (0, 0, 0), (100, 380), (540, 380)) # Draw a black line
 
-# Draw the ground
-# Draw the bottom of the house
-# Draw two walls
+pygame.draw.line(screen, (34, 139, 34), (100, 380), (540, 380), 5) #ground
+pygame.draw.line(screen, (34, 139, 34), (100, 380), (100, 100), 5) #væg
+pygame.draw.line(screen, (34, 139, 34), (540, 380), (540, 100), 5) #væg2
 # Draw the roof
 
 # Make sure the window stays open until the user closes it
